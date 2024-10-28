@@ -29,5 +29,4 @@ npm run build
 yarn build
 ```
 
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
 # MineCom_Backend_Apis_Strapi
