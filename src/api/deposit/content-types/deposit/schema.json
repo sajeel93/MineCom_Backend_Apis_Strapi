@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deposits",
+  "info": {
+    "singularName": "deposit",
+    "pluralName": "deposits",
+    "displayName": "Deposits"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "integer"
+    },
+    "deposit_date": {
+      "type": "date"
+    },
+    "dashboard": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dashboard.dashboard",
+      "inversedBy": "deposits"
+    }
+  }
+}

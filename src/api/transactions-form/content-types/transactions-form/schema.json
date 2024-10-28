@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions_forms",
+  "info": {
+    "singularName": "transactions-form",
+    "pluralName": "transactions-forms",
+    "displayName": "TransactionsForm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "iban": {
+      "type": "string"
+    },
+    "bic": {
+      "type": "string"
+    },
+    "bank_name": {
+      "type": "string"
+    },
+    "account_holder_name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "recommenderId": {
+      "type": "string"
+    },
+    "bank_datum": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bank-data.bank-data",
+      "inversedBy": "transactions_forms"
+    }
+  }
+}

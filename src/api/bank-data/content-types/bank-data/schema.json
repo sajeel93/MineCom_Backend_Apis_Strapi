@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banks_data",
+  "info": {
+    "singularName": "bank-data",
+    "pluralName": "banks-data",
+    "displayName": "Bank Data",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "bank_data"
+    },
+    "transactions_forms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::transactions-form.transactions-form",
+      "mappedBy": "bank_datum"
+    }
+  }
+}
